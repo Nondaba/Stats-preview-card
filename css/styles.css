@@ -1,0 +1,120 @@
+/* custom variables */
+:root {
+  --interfont: "Inter", sans-serif;
+  --lexendfont: "Lexend Deca", sans-serif;
+  --mainBG: hsl(233, 47%, 7%);
+  --cardBG: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --headingStats: hsl(0, 0%, 100%);
+  --mainParagragh: hsla(0, 0%, 100%, 0.75);
+  --statsHeadings: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 15px;
+  background-color: var(--mainBG);
+  font-family: var(--interfont);
+}
+.main-container {
+  background-color: var(--cardBG);
+  margin: 5rem auto;
+  border-radius: 0.3rem;
+  max-width: 300px;
+  text-align: center;
+  overflow: hidden;
+}
+.mobile-picture-container {
+  max-width: 100%;
+  aspect-ratio: 1.5/1;
+  background-image: url("../images/image-header-mobile.jpg");
+  background-size: 100% 100%;
+  background-color: hsl(277, 64%, 61%, 0.5);
+  background-blend-mode: multiply;
+}
+
+.content-container {
+  padding: 22px 11px;
+}
+.content-container h1 {
+  color: var(--headingStats);
+  font-weight: 700;
+}
+.content-container h1 span {
+  color: var(--accent);
+}
+.content-container p {
+  padding: 15px 11px;
+  color: var(--mainParagragh);
+  line-height: 23px;
+  font-weight: 400px;
+}
+.stats-container ul li {
+  list-style-type: none;
+  color: var(--headingStats);
+  padding: 0.9375rem 0;
+}
+.stats-container ul li h2 {
+  font-weight: 700;
+}
+.stats-container ul li p {
+  font-size: small;
+  line-height: 0.1875rem;
+  letter-spacing: 0.125rem;
+  font-family: var(--lexendfont);
+}
+
+.attribution {
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  padding-top: 20px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+@media (min-width: 700px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    text-align: start;
+    margin-bottom: 50px;
+  }
+  .mobile-picture-container {
+    display: none;
+  }
+  .desktop-picture-container {
+    max-width: 100%;
+    aspect-ratio: 1.2/1;
+    background-image: url("../images/image-header-desktop.jpg");
+    background-size: 100% 100%;
+    background-color: hsl(277, 64%, 61%, 0.5);
+    background-blend-mode: multiply;
+  }
+  .content-container {
+    padding: 55px 60px;
+  }
+  .content-container #description {
+    padding: 0;
+    position: relative;
+    top: 20px;
+  }
+  .stats-container ul li {
+    display: inline-block;
+    position: relative;
+    top: 80px;
+  }
+  .stats-container p {
+    padding: 15px 0;
+  }
+  .list-2 {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+} ;
